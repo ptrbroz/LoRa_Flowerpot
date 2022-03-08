@@ -17,14 +17,23 @@ Dále na The things stacku: (thethingsnetwork.org -> start building)
 - vytvoř novou aplikaci
 - add end device -> manually
 - nastav:
+- 
 Freq. plan: 863-870 (SF9 for RX2)
+
 LoRaWAN ver. 1.0.1
+
 Activation mode - OTAA
+
 Additional LoRaWAN capabilities - None
+
 Network Defaults - zaškrtnout Use network's default mac settings
+
 Cluster settings - nezaškrtávat extended backend servers
+
 DevEUI - sem doplň device eui opsané ze sériovky
+
 AppEUI - 0101010101010101
+
 AppKey - 2B7E151628AED2A6ABF7158809CF4F3C (pozn.: TOTO NENÍ BEZPEČNÉ, nechávám ho tu zveřejněné jen pro potřeby prvního příkladu... bude nutno eventuálně nahradit něčím jiným. Tohle je defaultní app key který mají uvedený v tom examplu od STM32)
 
 
