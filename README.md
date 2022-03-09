@@ -5,7 +5,7 @@ Repozitář na semestrální práci do předmětu Sběr a přenos dat.
 Návod ke zprovoznění prvního pokusu a připojení k TTN:
 
 - Nainstaluj stm32cubeide
-- Stáhni I-CUBE-LRWAN, rozbal.
+- Stáhni I-CUBE-LRWAN, rozbal. https://www.st.com/en/embedded-software/i-cube-lrwan.html
 - Naklonuj tento repozitář do \STM32CubeExpansion_LRWAN_V2.1.0\Projects\B-L072Z-LRWAN1\Applications\LoRaWAN\LoRa_Flowerpot.
 - v stm32cubeide dej file - open project from file system - najdi složku LoRa_Flowerpot. stm32Cubeide by mělo automaticky najít i stm32cubeide projekt vnořenej uvnitř.
 - zkompiluj a spusť projekt. Nejspíš bude potřeba v cubeide otevřít vnořenou složku stm32cubeide, v ní pravým na projekt (cmwx1zzabz_0xx) a run as.
