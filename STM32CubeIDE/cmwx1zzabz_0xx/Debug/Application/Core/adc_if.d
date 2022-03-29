@@ -1,5 +1,5 @@
 Application/Core/adc_if.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/Core/Src/adc_if.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/Core/Src/adc_if.c \
  ../../../Core/Inc/adc_if.h ../../../Core/Inc/adc.h \
  ../../../Core/Inc/main.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \

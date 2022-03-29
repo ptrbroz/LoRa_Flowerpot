@@ -120,6 +120,12 @@ void SYS_DeInitMeasurement(void)
   /* USER CODE END SYS_DeInitMeasurement_1 */
 }
 
+uint16_t getBowlWatterLevel(void){
+	uint32_t measuredLevel = 0;
+	measuredLevel = ADC_ReadChannels(ADC_CHANNEL_TEMPSENSOR);
+	return 0;
+}
+
 int16_t SYS_GetTemperatureLevel(void)
 {
   /* USER CODE BEGIN SYS_GetTemperatureLevel_1 */
@@ -159,6 +165,11 @@ uint16_t SYS_GetBatteryLevel(void)
   {
     batteryLevelmV = (((uint32_t) VDDA_VREFINT_CAL * (*VREFINT_CAL)) / measuredLevel);
   }
+
+  APP_LOG(TS_ON, VLEVEL_L, "test= %d\n\r", *VREFINT_CAL);
+  APP_LOG(TS_ON, VLEVEL_L, "test_2= %d\n\r", VDDA_VREFINT_CAL);
+  measuredLevel = ADC_ReadChannels(ADC_CHANNEL_0);
+  APP_LOG(TS_ON, VLEVEL_L, "ADC0= %d\n\r", measuredLevel);
 
   return batteryLevelmV;
   /* USER CODE BEGIN SYS_GetBatteryLevel_2 */

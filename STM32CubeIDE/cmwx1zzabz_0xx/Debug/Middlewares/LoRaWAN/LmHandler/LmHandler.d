@@ -1,5 +1,5 @@
 Middlewares/LoRaWAN/LmHandler/LmHandler.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.c \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../../Core/Inc/utilities_conf.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h \
@@ -9,7 +9,7 @@ Middlewares/LoRaWAN/LmHandler/LmHandler.o: \
  ../../../LoRaWAN/Target/timer.h \
  ../../../../../../../../Utilities/timer/stm32_timer.h \
  ../../../LoRaWAN/App/Commissioning.h ../../../LoRaWAN/App/se-identity.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h \
  ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
@@ -26,20 +26,20 @@ Middlewares/LoRaWAN/LmHandler/LmHandler.o: \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTest.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h \
- ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhPackage.h \
+ ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
- ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhpCompliance.h \
- ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhPackage.h \
+ ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpCompliance.h \
+ ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCrypto.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacMessageTypes.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
  ../../../LoRaWAN/Target/mw_log_conf.h \
  ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h \
  ../../../LoRaWAN/App/lora_info.h
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h:
@@ -62,7 +62,7 @@ Middlewares/LoRaWAN/LmHandler/LmHandler.o: \
 
 ../../../LoRaWAN/App/se-identity.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h:
 
 ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
 
@@ -96,19 +96,19 @@ C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRa
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTest.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h:
 
-../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhPackage.h:
+../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h:
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
 
-../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhpCompliance.h:
+../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpCompliance.h:
 
-../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/packages/LmhPackage.h:
+../../../../../../../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h:
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h:
 
@@ -122,6 +122,6 @@ C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRa
 
 ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h:
 
 ../../../LoRaWAN/App/lora_info.h:

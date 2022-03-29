@@ -1,6 +1,6 @@
 Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.c \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -37,7 +37,7 @@ Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h:
 
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 

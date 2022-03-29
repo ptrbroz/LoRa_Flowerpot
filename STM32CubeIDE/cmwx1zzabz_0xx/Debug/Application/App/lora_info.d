@@ -1,5 +1,5 @@
 Application/App/lora_info.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.c \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
  ../../../LoRaWAN/Target/timer.h \
  ../../../../../../../../Utilities/timer/stm32_timer.h \
@@ -18,7 +18,7 @@ Application/App/lora_info.o: \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.h \
  ../../../Core/Inc/sys_app.h ../../../Core/Inc/sys_conf.h \
  ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h
 
@@ -58,7 +58,7 @@ Application/App/lora_info.o: \
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Projects/B-L072Z-LRWAN1/Applications/LoRaWAN/LoRa_Flowerpot/LoRaWAN/App/lora_info.h:
 
 ../../../Core/Inc/sys_app.h:
 

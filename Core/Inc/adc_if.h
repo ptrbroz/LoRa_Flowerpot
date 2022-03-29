@@ -91,6 +91,9 @@ int16_t SYS_GetTemperatureLevel(void);
   */
 uint16_t SYS_GetBatteryLevel(void);
 
+
+uint16_t getBowlWatterLevel(void);
+
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

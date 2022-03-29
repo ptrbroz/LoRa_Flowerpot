@@ -1,7 +1,7 @@
 Middlewares/LoRaWAN/Mac/Region/RegionAU915.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.c \
  ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
  ../../../LoRaWAN/Target/timer.h \
  ../../../../../../../../Utilities/timer/stm32_timer.h \
@@ -13,7 +13,7 @@ Middlewares/LoRaWAN/Mac/Region/RegionAU915.o: \
  ../../../LoRaWAN/Target/systime.h \
  ../../../../../../../../Utilities/misc/stm32_systime.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
@@ -22,12 +22,12 @@ Middlewares/LoRaWAN/Mac/Region/RegionAU915.o: \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCryptoNvm.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h \
  ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.h \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionBaseUS.h
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionBaseUS.h
 
 ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h:
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:
 
@@ -51,7 +51,7 @@ C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRa
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h:
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h:
 
@@ -69,6 +69,6 @@ C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRa
 
 ../../../../../../../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionAU915.h:
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionBaseUS.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionBaseUS.h:

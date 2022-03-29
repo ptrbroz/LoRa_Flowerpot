@@ -1,6 +1,6 @@
 Drivers/BSP/IKS01A2/iks01a2_motion_sensors.o: \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.c \
- C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.h \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.c \
+ /run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.h \
  ../../../LoRaWAN/Target/iks01a2_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
@@ -46,7 +46,7 @@ Drivers/BSP/IKS01A2/iks01a2_motion_sensors.o: \
  ../../../../../../../../Drivers/BSP/Components/lsm303agr/lsm303agr.h \
  ../../../../../../../../Drivers/BSP/Components/lsm303agr/lsm303agr_reg.h
 
-C:/fel/spd/kvetinac/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.h:
+/run/media/Zaja/DA50F9F050F9D36D/Users/Lenovo/OneDrive\ -\ České\ vysoké\ učení\ technické\ v\ Praze/Skola/FEL\ -\ CVUT/Druhý\ semestr/SPD/Projekt/STM32CubeExpansion_LRWAN_V2.1.0/Drivers/BSP/IKS01A2/iks01a2_motion_sensors.h:
 
 ../../../LoRaWAN/Target/iks01a2_conf.h:
 
