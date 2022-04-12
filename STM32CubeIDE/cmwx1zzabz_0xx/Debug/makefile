@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -26,7 +26,6 @@ RM := rm -rf
 -include Application/SW4STM32/subdir.mk
 -include Application/Core/subdir.mk
 -include Application/App/subdir.mk
--include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -51,12 +50,15 @@ $(wildcard ../makefile.targets) \
 
 BUILD_ARTIFACT_NAME := cmwx1zzabz_0xx
 BUILD_ARTIFACT_EXTENSION := elf
-BUILD_ARTIFACT_PREFIX := 
-BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME).$(BUILD_ARTIFACT_EXTENSION)
+BUILD_ARTIFACT_PREFIX :=
+BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
 cmwx1zzabz_0xx.elf \
+
+MAP_FILES += \
+cmwx1zzabz_0xx.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
@@ -75,7 +77,7 @@ all: main-build
 main-build: cmwx1zzabz_0xx.elf secondary-outputs
 
 # Tool invocations
-cmwx1zzabz_0xx.elf: $(OBJS) $(USER_OBJS) ../STM32L072CZTx_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+cmwx1zzabz_0xx.elf cmwx1zzabz_0xx.map: $(OBJS) $(USER_OBJS) ../STM32L072CZTx_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "cmwx1zzabz_0xx.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"../STM32L072CZTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="cmwx1zzabz_0xx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -97,7 +99,7 @@ cmwx1zzabz_0xx.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 
 # Other Targets
 clean:
-	-$(RM) *
+	-$(RM) cmwx1zzabz_0xx.bin cmwx1zzabz_0xx.elf cmwx1zzabz_0xx.list cmwx1zzabz_0xx.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
@@ -109,7 +111,6 @@ fail-specified-linker-script-missing:
 warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
-.PHONY: all clean dependents fail-specified-linker-script-missing warn-no-linker-script-specified
-.SECONDARY:
+.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
 
 -include ../makefile.targets

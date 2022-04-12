@@ -40,6 +40,8 @@
 
 /* USER CODE BEGIN Includes */
 
+#include "sh3x.h"
+
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -424,17 +426,22 @@ static void SendTxData(void)
   AppData.BufferSize = CayenneLppGetSize();
 #else  /* not CAYENNE_LPP */
 
-  const char msgStr[] = "Slava Ukraini!";
+  /*const char msgStr[] = "Slava Ukraini!";
 
   int maxMsgIndex = sizeof msgStr;
 
   for(int a = 0; a<maxMsgIndex; a++){
 	  AppData.Buffer[i++] = msgStr[a];
-  }
+  }*/
 
   static int messageCounter = 0;
   AppData.Buffer[i++] = messageCounter;
   messageCounter++;
+
+  APP_LOG(TS_OFF, VLEVEL_M, "\r\n###### =~~ In Tx ~~=\r\n");
+
+  //ADC_ReadChannels(0);
+
 
   humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */
 

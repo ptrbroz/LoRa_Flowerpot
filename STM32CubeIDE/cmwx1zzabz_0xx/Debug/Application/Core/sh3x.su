@@ -1,0 +1,6 @@
+../Application/Core/sh3x.c:36:13:sht3x_send_command	24	static
+../Application/Core/sh3x.c:20:16:calculate_crc.constprop	8	static
+../Application/Core/sh3x.c:53:6:sht3x_init	32	static
+../Application/Core/sh3x.c:73:6:sht3x_read_temperature_and_humidity	48	static
+../Application/Core/sh3x.c:99:6:sht3x_set_header_enable	8	static
+../Application/Core/sh3x.c:108:19:MX_I2C1_Init	24	static
