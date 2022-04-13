@@ -100,6 +100,10 @@ static uint32_t ADC_ReadChannels(uint32_t channel);
 /* Exported functions --------------------------------------------------------*/
 /* USER CODE BEGIN EF */
 
+uint32_t ADC_ReadChannels_Public(uint32_t channel){
+	return ADC_ReadChannels(channel);
+}
+
 /* USER CODE END EF */
 
 void SYS_InitMeasurement(void)

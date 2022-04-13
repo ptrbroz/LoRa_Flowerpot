@@ -64,7 +64,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+uint32_t ADC_ReadChannels_Public(uint32_t channel);
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/

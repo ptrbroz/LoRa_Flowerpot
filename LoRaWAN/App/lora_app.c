@@ -485,8 +485,29 @@ static void SendTxData(void)
 
   */ //end of temperature and humidity
 
-  ADC_ReadChannels(0);
+  //ADC_ReadChannels(0);
 
+  uint32_t light, soil;
+
+  light = ADC_ReadChannels_Public(0);
+  soil = ADC_ReadChannels_Public(4);
+
+  //todo try to fix... or put external mux on adc 0
+  soil = light + 15;
+
+  APP_LOG(TS_ON, VLEVEL_L, "ADC0= %d ADC5 = %d \n\r", light, soil);
+
+  //adc resolution is 12 bits
+  uint8_t lightLow =  (uint8_t)(light & 0xff);
+  uint8_t lightHigh = (uint8_t)((light >> 8) & 0x0f);
+
+  uint8_t soilLow =  (uint8_t)(soil & 0xff);
+  uint8_t soilHigh = (uint8_t)((soil >> 8) & 0x0f);
+
+  AppData.Buffer[i++] = lightLow;
+  AppData.Buffer[i++] = lightHigh;
+  AppData.Buffer[i++] = soilLow;
+  AppData.Buffer[i++] = soilHigh;
 
   humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */
 
