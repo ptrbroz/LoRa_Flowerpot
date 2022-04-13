@@ -47,12 +47,8 @@ typedef struct {
 
 } sht3x_handle_t;
 
-extern I2C_HandleTypeDef hi2c1;
-
-/**
- * adapted from dummy flowerpot
- */
-HAL_StatusTypeDef MX_I2C1_Init(void);
+extern I2C_HandleTypeDef hi2c2;
+void MX_I2C2_Init(void);
 
 /**
  * Checks if an SHT3x is reachable using the given handle.

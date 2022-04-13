@@ -438,9 +438,54 @@ static void SendTxData(void)
   AppData.Buffer[i++] = messageCounter;
   messageCounter++;
 
-  APP_LOG(TS_OFF, VLEVEL_M, "\r\n###### =~~ In Tx ~~=\r\n");
+  // Temperature and humidity
+  /*
+  //does not currently work....
+  static I2C_HandleTypeDef hi2c2;
+  static int initNeeded = 1;
+  static sht3x_handle_t shtHandle =  {
+          .i2c_handle = &hi2c2,
+          .device_address = SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
+      };
 
-  //ADC_ReadChannels(0);
+  if(initNeeded){
+		hi2c2.Instance = I2C2;
+		hi2c2.Init.Timing = 0x00000708;
+		hi2c2.Init.OwnAddress1 = 0;
+		hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+		hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+		hi2c2.Init.OwnAddress2 = 0;
+		hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+		hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+		hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+		__HAL_RCC_GPIOB_CLK_ENABLE();
+		__HAL_RCC_GPIOA_CLK_ENABLE();
+		if(HAL_I2C_Init(&hi2c2) != HAL_OK){
+			APP_LOG(TS_OFF, VLEVEL_M, "\r\n ....................>>>>i2c init failed<<<<");
+		}
+		if(HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK){
+			APP_LOG(TS_OFF, VLEVEL_M, "\r\n ....................>>>>analog filter config failed<<<<");
+		}
+		if(HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK){
+			APP_LOG(TS_OFF, VLEVEL_M, "\r\n ....................>>>>digital filter config failed<<<<");
+		}
+		if (!sht3x_init(&shtHandle)) {
+			APP_LOG(TS_OFF, VLEVEL_M, "\r\n ....................>>>>SHT init failed<<<<");
+			}
+		else{
+			APP_LOG(TS_OFF, VLEVEL_M, "\r\n>>>>SHT init OK<<<<");
+			initNeeded = 0;
+			}
+  }
+
+  float temp, hum;
+  sht3x_read_temperature_and_humidity(&shtHandle, &temp, &hum);
+
+  APP_LOG(TS_OFF, VLEVEL_M, "\r\n###### =~~ In Tx: temp %f hum %f ~~=\r\n", temp, hum);
+
+  */ //end of temperature and humidity
+
+  ADC_ReadChannels(0);
 
 
   humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */

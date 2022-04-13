@@ -105,38 +105,38 @@ bool sht3x_set_header_enable(sht3x_handle_t *handle, bool enable)
 	}
 }
 
-HAL_StatusTypeDef MX_I2C1_Init(void)
+
+void MX_I2C2_Init(void)
 {
 
-  HAL_StatusTypeDef ret = HAL_OK;
-  hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00000708;
-  hi2c1.Init.OwnAddress1 = 0;
-  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c1.Init.OwnAddress2 = 0;
-  hi2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
-  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if(HAL_I2C_Init(&hi2c1) != HAL_OK)
-  {
-    ret = HAL_ERROR;
-  }
+  /* USER CODE BEGIN I2C2_Init 0 */
 
-  if(HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
-  {
-	ret = HAL_ERROR;
-  }
+  /* USER CODE END I2C2_Init 0 */
+
+  /* USER CODE BEGIN I2C2_Init 1 */
+
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.Timing = 0x00000708;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  HAL_I2C_Init(&hi2c2);
+
+  /** Configure Analogue filter
+  */
+  HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE);
 
   /** Configure Digital filter
   */
-  if(HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
-  {
-	ret = HAL_ERROR;
-  }
+  HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0);
+  /* USER CODE BEGIN I2C2_Init 2 */
 
-  return ret;
+  /* USER CODE END I2C2_Init 2 */
 
 }
-
 
