@@ -38,9 +38,15 @@
 #include "STM32L0.h"
 #include "CayenneLPP.h"
 
+#include <Arduino.h>
+#include <Wire.h>
+#include "Adafruit_SHT31.h"
+
+
 
 CayenneLPP myLPP(64);
 
+Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
 
 const char *devAddr = "260B3E8F";
@@ -127,6 +133,18 @@ void setup( void )
     LoRaWAN.joinABP(devAddr, nwkSKey, appSKey);
 
     Serial.println("JOIN( )");
+
+    if (! sht31.begin(0x44)) {   // Set to 0x45 for alternate i2c addr
+    Serial.println("Couldn't find SHT31");
+    while (1) delay(1);
+  }
+
+  Serial.print("Heater Enabled State: ");
+  if (sht31.isHeaterEnabled())
+    Serial.println("ENABLED");
+  else
+    Serial.println("DISABLED");
+    
 }
 
 void loop( void )
@@ -173,12 +191,19 @@ void loop( void )
             //int buff[] = {1 ,2, 3, 15};
             //LoRaWAN.sendPacket(buff, 4);
             //LoRaWAN.sendPacket(myLPP.getBuffer(), myLPP.getSize());
-            LoRaWAN.sendPacket(myLPP.getBuffer(), 1);
+            //LoRaWAN.sendPacket(myLPP.getBuffer(), 1);
 
         
     }
 
- delay(30000);
+ float t = sht31.readTemperature();
+ float h = sht31.readHumidity();
+
+ Serial.print("Temp *C = "); Serial.print(t); Serial.print("\t\t");
+ Serial.print("Hum. % = "); Serial.println(h);
+
+
+ delay(3000);
 
 
 }
