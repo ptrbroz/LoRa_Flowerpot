@@ -149,6 +149,32 @@ void setup( void )
 
 void loop( void )
 {
+
+    float t = sht31.readTemperature();
+    float h = sht31.readHumidity();
+
+    int adcRead1 = analogRead(0);
+    int adcRead2 = 142;
+ 
+    Serial.print("ADC = "); Serial.print(adcRead1); Serial.print("\n\r");
+    Serial.print("Temp *C = "); Serial.print(t); Serial.print("\t\t");
+    Serial.print("Hum. % = "); Serial.println(h);
+
+    int dataArrayLen = 8;
+    uint8_t dataArray[dataArrayLen];
+
+    uint16_t adc1 = (uint16_t) adcRead1;
+    uint16_t adc2 = (uint16_t) adcRead2;
+    uint16_t temp10 = (uint16_t) round(10.0*t);
+    uint16_t hum10  = (uint16_t) round(10.0*h);
+
+    *( (uint16_t *) (dataArray + 0)) = adc1;
+    *( (uint16_t *) (dataArray + 2)) = adc2;
+    *( (uint16_t *) (dataArray + 4)) = temp10;
+    *( (uint16_t *) (dataArray + 6)) = hum10;
+    
+
+  
     if (LoRaWAN.joined() && !LoRaWAN.busy())
     {
         if (STM32L0.getVBUS()) 
@@ -177,16 +203,21 @@ void loop( void )
         Serial.print(LoRaWAN.getDownLinkCounter());
         Serial.println(" )");
 
-//        LoRaWAN.beginPacket();
-//        LoRaWAN.write(0xef);
-//        LoRaWAN.write(0xbe);
-//        LoRaWAN.write(0xad);
-//        LoRaWAN.write(0xde);
-//        LoRaWAN.endPacket();
+        Serial.print("Lora packet data:\n\r");
+        
+        LoRaWAN.beginPacket();
+        int i;
+        for(i = 0; i < dataArrayLen; i++){
+            LoRaWAN.write(dataArray[i]);
+            Serial.print(dataArray[i]);
+            Serial.print(" ");
+        }
+        LoRaWAN.endPacket();
+        Serial.print("\n\r");
 
-            myLPP.reset();
-            myLPP.addTemperature(0, 27);
-            myLPP.addRelativeHumidity(0, 30);
+            //myLPP.reset();
+            //myLPP.addTemperature(0, 27);
+            //myLPP.addRelativeHumidity(0, 30);
 
             //int buff[] = {1 ,2, 3, 15};
             //LoRaWAN.sendPacket(buff, 4);
@@ -196,14 +227,10 @@ void loop( void )
         
     }
 
- float t = sht31.readTemperature();
- float h = sht31.readHumidity();
-
- Serial.print("Temp *C = "); Serial.print(t); Serial.print("\t\t");
- Serial.print("Hum. % = "); Serial.println(h);
+ 
 
 
- delay(3000);
+ delay(5000);
 
 
 }
