@@ -1,3 +1,27 @@
+# Input formatter
+
+Přidej následující kód do své aplikace pro arduino lora flowerpot (nastaveni viz nize):
+
+payload formatters=> uplink => custom javascript
+```
+function decodeUplink(input) {
+  adcVal1 = input.bytes[0] + (input.bytes[1] << 8);
+  adcVal2 = input.bytes[2] + (input.bytes[3] << 8);
+  t10 = input.bytes[4] + (input.bytes[5] << 8);
+  h10 = input.bytes[6] + (input.bytes[7] << 8);
+  
+  return {
+    data: {
+      adc1: adcVal1,
+      adc2: adcVal2,
+      t : t10/10.0,
+      h : h10/10.0
+    },
+    warnings: [],
+    errors: []
+  };
+}
+```
 # LoRa_Flowerpot
  
 Repozitář na semestrální práci do předmětu Sběr a přenos dat.
