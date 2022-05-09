@@ -132,6 +132,8 @@ void setup( void )
     // LoRaWAN.setAntennaGain(2.0);
     LoRaWAN.joinABP(devAddr, nwkSKey, appSKey);
 
+    LoRaWAN.onReceive(callback_onReceive);
+
     Serial.println("JOIN( )");
 
     if (! sht31.begin(0x44)) {   // Set to 0x45 for alternate i2c addr
@@ -144,8 +146,23 @@ void setup( void )
     Serial.println("ENABLED");
   else
     Serial.println("DISABLED");
+
     
+    pinMode(2, OUTPUT); //multiplexer
+
+    pinMode(4, OUTPUT);
+    pinMode(5, OUTPUT);
+    
+    pinMode(A0, INPUT); //adc in
+    pinMode(A4, INPUT);  //does not work...
+
+    pinMode(9, INPUT_PULLUP); 
+    pinMode(8, INPUT_PULLUP);
+    pinMode(11, INPUT_PULLUP);
+    pinMode(12, INPUT_PULLUP);
 }
+
+volatile uint16_t dirtTarget = 0;
 
 void loop( void )
 {
@@ -153,25 +170,51 @@ void loop( void )
     float t = sht31.readTemperature();
     float h = sht31.readHumidity();
 
+    static int ctrVal = 0;
+    ctrVal = !ctrVal;
+
+    
+    digitalWrite(4, HIGH);
+    digitalWrite(5, HIGH);
+    
+    
+
+    //while(1){
+    digitalWrite(2, LOW); 
+    delay(1000);
     int adcRead1 = analogRead(0);
-    int adcRead2 = 142;
+    
+    digitalWrite(2, HIGH); 
+    delay(1000);
+    int adcRead2 = analogRead(0);
+    
+    int dval1 = digitalRead(9); //miska low
+    int dval2 = digitalRead(8); //miska high
+    int dval3 = digitalRead(11); //reservoir low
+    int dval4 = digitalRead(12); //reservoir high
  
-    Serial.print("ADC = "); Serial.print(adcRead1); Serial.print("\n\r");
+    Serial.print("ADC1 = "); Serial.print(adcRead1); Serial.print(" ADC2 = "); Serial.print(adcRead2); Serial.print("\n\r");
     Serial.print("Temp *C = "); Serial.print(t); Serial.print("\t\t");
     Serial.print("Hum. % = "); Serial.println(h);
-
-    int dataArrayLen = 8;
+    Serial.print("Digitals: "); Serial.print(dval1); Serial.print(" "); Serial.print(dval2); Serial.print(" "); Serial.print(dval3); Serial.print(" "); Serial.print(dval4); Serial.print("\n\r");
+    
+    int dataArrayLen = 9;
     uint8_t dataArray[dataArrayLen];
 
     uint16_t adc1 = (uint16_t) adcRead1;
     uint16_t adc2 = (uint16_t) adcRead2;
     uint16_t temp10 = (uint16_t) round(10.0*t);
     uint16_t hum10  = (uint16_t) round(10.0*h);
-
+    uint8_t mask = 0x01;
+    uint8_t digitals  = (dval1 << 0) + (dval2 << 1) + (dval3 <<2) + (dval4 << 3);
+    Serial.print("digitals byte = "); Serial.print(digitals);
+    
     *( (uint16_t *) (dataArray + 0)) = adc1;
     *( (uint16_t *) (dataArray + 2)) = adc2;
     *( (uint16_t *) (dataArray + 4)) = temp10;
     *( (uint16_t *) (dataArray + 6)) = hum10;
+    *( (uint8_t  *) (dataArray + 8)) = digitals;
+    
     
 
   
@@ -233,4 +276,25 @@ void loop( void )
  delay(5000);
 
 
+}
+
+void callback_onReceive(){
+  Serial.print("ON RECEIVE CALLBACK\n");
+  if (LoRaWAN.parsePacket()){
+      uint32_t size;
+      uint8_t data[50];
+      size = LoRaWAN.read(&data[0], sizeof(data));
+      if(!size){
+        Serial.print("no data in packet\n");
+      }
+      else{
+        for(int i=0;i<size;i++){
+          Serial.print(data[i],HEX);
+        }
+        Serial.println();
+      }
+  }
+  else{
+    Serial.print("can't parse :(\n");
+  }
 }
