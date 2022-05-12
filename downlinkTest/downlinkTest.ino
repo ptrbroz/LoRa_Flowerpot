@@ -48,13 +48,6 @@ CayenneLPP myLPP(64);
 
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
-int soilTarget = 0;
-int tempTarget = 0;
-int mode = 0;
-
-int loopCount = 0;
-int loopDelay = 5000;
-int loopResetTime = 20*1000;
 
 const char *devAddr = "260B3E8F";
 const char *nwkSKey = "2B7E151628AED2A6ABF7158809CF4F3C";
@@ -137,11 +130,9 @@ void setup( void )
       
     // LoRaWAN.setDutyCycle(false);     
     // LoRaWAN.setAntennaGain(2.0);
-
-    
-    LoRaWAN.onReceive(callback_onReceive);
     LoRaWAN.joinABP(devAddr, nwkSKey, appSKey);
 
+    LoRaWAN.onReceive(callback_onReceive);
 
     
 
@@ -149,7 +140,7 @@ void setup( void )
 
     if (! sht31.begin(0x44)) {   // Set to 0x45 for alternate i2c addr
     Serial.println("Couldn't find SHT31");
-    //while (1) delay(1);
+    while (1) delay(1);
   }
 
   Serial.print("Heater Enabled State: ");
@@ -161,8 +152,8 @@ void setup( void )
     
     pinMode(2, OUTPUT); //multiplexer
 
-    pinMode(4, OUTPUT); //zarovka
-    pinMode(5, OUTPUT); //motor
+    pinMode(4, OUTPUT);
+    pinMode(5, OUTPUT);
     
     pinMode(A0, INPUT); //adc in
     pinMode(A4, INPUT);  //does not work...
@@ -180,14 +171,20 @@ void loop( void )
 
     float t = sht31.readTemperature();
     float h = sht31.readHumidity();
-    
+
     static int ctrVal = 0;
     ctrVal = !ctrVal;
+
+    
+    digitalWrite(4, HIGH);
+    digitalWrite(5, HIGH);
+    
+    
 
     //while(1){
     digitalWrite(2, LOW); 
     delay(1000);
-    int adcRead1 = analogRead(0); 
+    int adcRead1 = analogRead(0);
     
     digitalWrite(2, HIGH); 
     delay(1000);
@@ -203,10 +200,10 @@ void loop( void )
     Serial.print("Hum. % = "); Serial.println(h);
     Serial.print("Digitals: "); Serial.print(dval1); Serial.print(" "); Serial.print(dval2); Serial.print(" "); Serial.print(dval3); Serial.print(" "); Serial.print(dval4); Serial.print("\n\r");
     
-    int dataArrayLen = 13;
+    int dataArrayLen = 9;
     uint8_t dataArray[dataArrayLen];
 
-    uint16_t adc1 = (uint16_t) adcRead1; //HLINA
+    uint16_t adc1 = (uint16_t) adcRead1;
     uint16_t adc2 = (uint16_t) adcRead2;
     uint16_t temp10 = (uint16_t) round(10.0*t);
     uint16_t hum10  = (uint16_t) round(10.0*h);
@@ -218,48 +215,8 @@ void loop( void )
     *( (uint16_t *) (dataArray + 2)) = adc2;
     *( (uint16_t *) (dataArray + 4)) = temp10;
     *( (uint16_t *) (dataArray + 6)) = hum10;
-    *( (uint16_t *) (dataArray + 8)) = (uint16_t) soilTarget;
-    *( (uint8_t  *) (dataArray + 10)) = (uint8_t) tempTarget;
-    *( (uint8_t  *) (dataArray + 11)) = (uint8_t) mode;
-    *( (uint8_t  *) (dataArray + 12)) = digitals;
+    *( (uint8_t  *) (dataArray + 8)) = digitals;
     
-    
-    
-
-    //rizeni zarovky
-    if(tempTarget==0){
-      //nerid teplotu.
-      digitalWrite(4, LOW); //zarovka
-    }
-    else{
-      if(temp10/10 < tempTarget){
-        digitalWrite(4, HIGH); //zarovka
-      }
-      else{
-        digitalWrite(4, LOW); //zarovka
-      }
-    }
-
-    //rizeni motoru
-    loopCount = loopCount + 1;
-    if(loopCount*loopDelay > loopResetTime){
-      loopCount = 0;
-      Serial.println("Attempting pump \n");
-      if(soilTarget == 0){
-        //nerid vlhkost
-        Serial.println("Target is 0. Not attempting \n");
-        digitalWrite(5, LOW); //motor
-      }
-      else{
-        
-        if(soilTarget < adc1  && dval3 == 0){ //spust motor pouze, pokud je v misce alespon nejaka voda.
-          Serial.println("PUMPING! \n");
-          digitalWrite(5, HIGH); //motor
-          delay(2000);
-          digitalWrite(5, LOW); //motor
-        }
-      }
-    }
     
 
   
@@ -318,35 +275,7 @@ void loop( void )
  
 
 
- delay(loopDelay);
-
-
- int nextChar = Serial.peek();
- int validConfig = 0;
-
- if(nextChar != -1){
-  validConfig = 1;
-  int left = 5;
-  while(left > 0){
-    left = left - 1;
-    nextChar = Serial.read();
-    if(nextChar != 100){
-      validConfig = 0;
-      break;
-    }
-  }
-
-  if(validConfig){
-    mode = Serial.read();
-    int low = Serial.read();
-    soilTarget = low + (Serial.read() << 8);
-    tempTarget = Serial.read();
-    Serial.print("New settings:\n");
-    Serial.print("Mode: "); Serial.print(mode); Serial.print("\n");
-    Serial.print("soilTarget: "); Serial.print(soilTarget); Serial.print("\n");
-    Serial.print("tempTarget: "); Serial.print(tempTarget); Serial.print("\n");
-    }
- }
+ delay(5000);
 
 
 }
